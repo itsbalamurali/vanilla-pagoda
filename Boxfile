@@ -1,0 +1,27 @@
+web1:
+  name: vanilla
+  shared_writable_dirs:
+    - conf/
+    - cache/
+    - uploads/
+  php_extensions:
+    - pdo_mysql
+    - mysql
+    - mysqli
+    - xml
+    - json
+    - simplexml
+    - mbstring
+    - mcrypt
+    - hash
+    - gd
+    - dom
+    - iconv
+    - curl
+    - soap
+    - apc
+  after_build:
+        - "mv pagoda/config.php conf/config.php"
+db1: 
+  name: vanilla
+  type: mysql
